@@ -2,44 +2,41 @@
 <html lang="en">
 <head>
     <style>
-        /* Dark Tech Theme */
-        body { background: #050b15; color: #00d4ff; font-family: 'Segoe UI', sans-serif; text-align: center; margin: 0; padding: 0; }
+        body { background: #050b15; color: #00d4ff; font-family: 'Segoe UI', sans-serif; text-align: center; margin: 0; }
         
-        /* CPU Power-up Animation */
-        .processor-node {
-            width: 120px; height: 120px; border-radius: 50%;
-            background: radial-gradient(circle, #00d4ff, #002244);
-            margin: 40px auto;
-            box-shadow: 0 0 30px #00d4ff;
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(0.9); box-shadow: 0 0 10px #00d4ff; }
-            50% { transform: scale(1.1); box-shadow: 0 0 50px #00d4ff; }
-            100% { transform: scale(0.9); box-shadow: 0 0 10px #00d4ff; }
+        /* 1. Animation Container */
+        .startup-container { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        
+        /* 2. Processor Node (Power Source) */
+        .processor { width: 100px; height: 100px; background: #00d4ff; border-radius: 10px; box-shadow: 0 0 20px #00d4ff; animation: powerFlow 2s ease-in-out; }
+        
+        /* 3. Fan Animation */
+        .fan { width: 150px; height: 150px; border: 5px solid #00d4ff; border-radius: 50%; margin-top: 20px; animation: spin 2s linear infinite; display: none; }
+
+        @keyframes powerFlow {
+            0% { transform: scale(0.5); opacity: 0; }
+            50% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(1); }
         }
 
-        h1 { font-size: 3em; text-transform: uppercase; letter-spacing: 3px; }
-        .details { background: #0a1420; padding: 20px; border: 1px solid #00d4ff; margin: 20px auto; width: 80%; }
-        .nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
     </style>
 </head>
 <body>
 
-    <div class="processor-node"></div>
-    <h1>ASHISH COMPUTER SERVICES</h1>
-    <p>Manjhiao More, Garhwa, Jharkhand - 822114</p>
-    <p>Contact: 8521450594</p>
-
-    <div class="nav">
-        <a href="index.html">HOME</a> | <a href="shop.html">SERVICES</a> | <a href="contact.html">CONTACT</a>
+    <div class="startup-container" id="startup">
+        <div class="processor"></div>
+        <div class="fan" id="fan"></div>
+        <h2 id="status">INITIALIZING SYSTEM...</h2>
     </div>
 
-    <div class="details">
-        <h2>WHAT WE OFFER</h2>
-        <p>Expert Computer Repair | Hardware Solutions | Data Recovery | Networking</p>
-        <h3 style="color: #ff9900;">🔥 CURRENT OFFER: Free System Health Checkup!</h3>
-    </div>
+    <script>
+        // Animation logic: Fan start hoga 2 second baad
+        setTimeout(() => {
+            document.getElementById('fan').style.display = "block";
+            document.getElementById('status').innerText = "SYSTEM POWERED UP!";
+        }, 2000);
+    </script>
 
 </body>
 </html>
