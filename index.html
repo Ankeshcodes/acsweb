@@ -1,40 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <title>Aapki Shop Ka Naam</title>
     <style>
-        body { background: #0b0e14; color: white; text-align: center; font-family: sans-serif; overflow: hidden; }
-        
-        /* Power-Up Animation */
-        .processor-node {
-            width: 100px; height: 100px;
-            background: radial-gradient(circle, #00d4ff, #0055ff);
-            margin: 50px auto;
-            border-radius: 50%;
-            box-shadow: 0 0 20px #00d4ff;
-            animation: powerPulse 2s infinite ease-in-out;
-        }
-
-        @keyframes powerPulse {
-            0% { transform: scale(0.8); opacity: 0.5; box-shadow: 0 0 10px #00d4ff; }
-            50% { transform: scale(1.2); opacity: 1; box-shadow: 0 0 40px #00d4ff; }
-            100% { transform: scale(0.8); opacity: 0.5; box-shadow: 0 0 10px #00d4ff; }
-        }
-
-        h1 { margin-top: 20px; text-transform: uppercase; letter-spacing: 5px; }
-        .nav a { color: #00d4ff; text-decoration: none; margin: 10px; font-weight: bold; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background: #333; color: white; padding: 20px; text-align: center; }
+        .hero { padding: 50px; text-align: center; background: #f4f4f4; }
+        .offer-section { background: #ff9800; color: white; padding: 20px; text-align: center; }
+        .content { display: flex; padding: 20px; }
+        .main-info { flex: 3; }
+        .sidebar { flex: 1; padding-left: 20px; }
     </style>
 </head>
 <body>
 
-    <div class="processor-node"></div>
-    <h1>System Initializing...</h1>
-    <p>Your shop is booting up. Coming Soon!</p>
+<header>
+    <h1>Welcome to [Aapki Shop Ka Naam]</h1>
+</header>
 
-    <div class="nav">
-        <a href="index.html">Home</a> | 
-        <a href="shop.html">Shop</a> | 
-        <a href="contact.html">Contact</a>
+<div class="hero">
+    <h2>Best Quality Items at Best Prices</h2>
+    <p>Hum bechte hain: Electronics, Accessories, aur bahut kuch!</p>
+</div>
+
+<div class="offer-section">
+    <h2>🔥 Special Offer: Flat 20% OFF on all items!</h2>
+</div>
+
+<div class="content">
+    <div class="main-info">
+        <h3>What we sell</h3>
+        <ul>
+            <li>Item 1 (Description)</li>
+            <li>Item 2 (Description)</li>
+            <li>Item 3 (Description)</li>
+        </ul>
     </div>
+    
+    <div class="sidebar">
+        <h3>Follow Us</h3>
+        <p><a href="https://instagram.com/aapka_handle">Instagram</a></p>
+        <p><a href="https://youtube.com/aapka_channel">YouTube</a></p>
+    </div>
+</div>
 
 </body>
 </html>
