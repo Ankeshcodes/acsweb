@@ -1,0 +1,133 @@
+/* Deep Dark Background */
+body {
+    margin: 0;
+    background-color: #030305;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: hidden;
+}
+
+/* 3D Circuit Background & Chip (Raven Inspired) */
+.circuit-bg {
+    position: relative;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.core-chip {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background: #0a0a0a;
+    border: 2px solid #ff7a00;
+    box-shadow: 0 0 40px #ff7a00, inset 0 0 20px #ff7a00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    /* Creating the 3D Isometric Tilt */
+    transform: rotateX(60deg) rotateZ(45deg); 
+    animation: floatChip 4s ease-in-out infinite;
+}
+
+.core-chip span {
+    /* Counter-rotate text so it faces front */
+    transform: rotateZ(-45deg) rotateX(-60deg);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 28px;
+    text-shadow: 0 0 15px #ff7a00;
+    letter-spacing: 2px;
+}
+
+@keyframes floatChip {
+    0%, 100% { transform: rotateX(60deg) rotateZ(45deg) translateY(0px); box-shadow: 0 0 40px #ff7a00, inset 0 0 20px #ff7a00; }
+    50% { transform: rotateX(60deg) rotateZ(45deg) translateY(-20px); box-shadow: 0 0 60px #ff9900, inset 0 0 30px #ff9900; }
+}
+
+/* Orange Circuit Lines */
+.line {
+    position: absolute;
+    background: #ff7a00;
+    box-shadow: 0 0 15px #ff7a00;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.line-1 { width: 30vw; height: 2px; left: 0; top: 50%; }
+.line-2 { width: 30vw; height: 2px; right: 0; top: 50%; }
+.line-3 { width: 2px; height: 150px; top: 0; left: 50%; }
+.line-4 { width: 2px; height: 150px; bottom: 0; left: 50%; }
+
+/* Content Styling */
+.main-content {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.glitch-text {
+    font-size: 2.5rem;
+    color: #ffffff;
+    letter-spacing: 4px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    color: #ff7a00;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.details-box {
+    background: rgba(255, 122, 0, 0.05);
+    border-left: 3px solid #ff7a00;
+    border-right: 3px solid #ff7a00;
+    padding: 15px;
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+}
+
+/* Navigation & Social Links */
+.nav-links {
+    margin-bottom: 40px;
+}
+
+.nav-links a {
+    color: #888;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #ff7a00;
+    text-shadow: 0 0 10px #ff7a00;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 15px;
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #ff7a00;
+    padding: 10px 20px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    background: #ff7a00;
+    color: #000;
+    box-shadow: 0 0 20px #ff7a00;
+}
