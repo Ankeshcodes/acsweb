@@ -1,49 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Aapki Shop Ka Naam</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        header { background: #333; color: white; padding: 20px; text-align: center; }
-        .hero { padding: 50px; text-align: center; background: #f4f4f4; }
-        .offer-section { background: #ff9800; color: white; padding: 20px; text-align: center; }
-        .content { display: flex; padding: 20px; }
-        .main-info { flex: 3; }
-        .sidebar { flex: 1; padding-left: 20px; }
+        /* Dark Tech Theme */
+        body { background: #050b15; color: #00d4ff; font-family: 'Segoe UI', sans-serif; text-align: center; margin: 0; padding: 0; }
+        
+        /* CPU Power-up Animation */
+        .processor-node {
+            width: 120px; height: 120px; border-radius: 50%;
+            background: radial-gradient(circle, #00d4ff, #002244);
+            margin: 40px auto;
+            box-shadow: 0 0 30px #00d4ff;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(0.9); box-shadow: 0 0 10px #00d4ff; }
+            50% { transform: scale(1.1); box-shadow: 0 0 50px #00d4ff; }
+            100% { transform: scale(0.9); box-shadow: 0 0 10px #00d4ff; }
+        }
+
+        h1 { font-size: 3em; text-transform: uppercase; letter-spacing: 3px; }
+        .details { background: #0a1420; padding: 20px; border: 1px solid #00d4ff; margin: 20px auto; width: 80%; }
+        .nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Welcome to [Aapki Shop Ka Naam]</h1>
-</header>
+    <div class="processor-node"></div>
+    <h1>ASHISH COMPUTER SERVICES</h1>
+    <p>Manjhiao More, Garhwa, Jharkhand - 822114</p>
+    <p>Contact: 8521450594</p>
 
-<div class="hero">
-    <h2>Best Quality Items at Best Prices</h2>
-    <p>Hum bechte hain: Electronics, Accessories, aur bahut kuch!</p>
-</div>
-
-<div class="offer-section">
-    <h2>🔥 Special Offer: Flat 20% OFF on all items!</h2>
-</div>
-
-<div class="content">
-    <div class="main-info">
-        <h3>What we sell</h3>
-        <ul>
-            <li>Item 1 (Description)</li>
-            <li>Item 2 (Description)</li>
-            <li>Item 3 (Description)</li>
-        </ul>
+    <div class="nav">
+        <a href="index.html">HOME</a> | <a href="shop.html">SERVICES</a> | <a href="contact.html">CONTACT</a>
     </div>
-    
-    <div class="sidebar">
-        <h3>Follow Us</h3>
-        <p><a href="https://instagram.com/aapka_handle">Instagram</a></p>
-        <p><a href="https://youtube.com/aapka_channel">YouTube</a></p>
+
+    <div class="details">
+        <h2>WHAT WE OFFER</h2>
+        <p>Expert Computer Repair | Hardware Solutions | Data Recovery | Networking</p>
+        <h3 style="color: #ff9900;">🔥 CURRENT OFFER: Free System Health Checkup!</h3>
     </div>
-</div>
 
 </body>
 </html>
